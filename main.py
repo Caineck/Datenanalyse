@@ -1,4 +1,5 @@
 import pandas as pd
+from matplotlib import pyplot as plt
 
 # Datensatz laden
 df = pd.read_csv("iris.csv")
@@ -46,3 +47,20 @@ print(average_sepal_length)
 # Einzigartige Werte der Spalte 'species' finden
 unique_species = df['species'].unique()
 print(unique_species)
+
+# Scatter plot erstellen farbkodiert nach 'species'
+plt.scatter(df['sepal.length'], df['sepal.width'])
+plt.xlabel('sepal.length')
+plt.ylabel('sepal.width')
+plt.show()
+
+setosa = df[df['species']=='Setosa']
+versicolor = df[df['species']=='Versicolor']
+virginica = df[df['species']=='Virginica']
+
+plt.scatter(setosa['sepal.length'], setosa['sepal.width'], color = 'red', marker='s')
+plt.scatter(versicolor['sepal.length'], versicolor['sepal.width'], color = 'blue', marker='o')
+plt.scatter(virginica['sepal.length'], virginica['sepal.width'], color = 'green',marker='^')
+plt.xlabel('sepal.length')
+plt.ylabel('sepal.width')
+plt.show()
