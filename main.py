@@ -3,13 +3,15 @@ from matplotlib import pyplot as plt
 
 # Datensatz laden
 df = pd.read_csv("iris.csv")
-print(df.head())
 
 # Datensatz erkunden, ersten Zeilen anzeigen
+print(df.head())
 print(df.tail())
-print(df.info())
 
 # Zusammenfassung des DataFrames mit Informationen zu jeder Spalte
+print(df.info())
+
+# 20 Mal '#' ausgeben
 print("#" * 20)
 
 # Spalten auswählen und die ersten 10 Zeilen anzeigen lassen
