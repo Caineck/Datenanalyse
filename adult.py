@@ -29,6 +29,7 @@ visualizer.show()
 kmeans = KMeans(n_clusters=4)
 pred = kmeans.fit_predict(data)
 
+
 # Tabelle mit neuer Spalte 'Label' in neuer CSV-Datei speichern
 data_new = pd.concat([data, pd.DataFrame(pred, columns=['label'])], axis=1)
 print(data_new)
